@@ -14,4 +14,30 @@ const circleArea = r => {
   return Math.PI * r * r;
 };
 
-module.exports = { sayHello, area, perimeter, circleArea };
+const createObj = (name, price) => {
+  let item = new Object()
+  item.name = name
+  item.price = price
+  return item
+}
+
+const cart = {
+  "items": [
+
+  ]
+}
+
+const cartArray = () => {
+  return cart
+}
+
+const addToCart = (obj) => {
+  cart.items.push(obj)
+}
+
+const cartSize = () => {
+  let items = cart.items
+  return items.length
+}
+
+module.exports = { sayHello, area, perimeter, circleArea, createObj, cartArray, addToCart, cartSize };
